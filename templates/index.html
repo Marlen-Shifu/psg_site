@@ -1,0 +1,169 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/table.css' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'img/site.webmanifest' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Учебный центр "PCG"</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar__body">
+                <div class="navbar__logo">
+                    <a href="{% url 'home' %}"><img src="{% static 'img/logo.png' %}" alt="logo"></a>
+                </div>
+                <div class="navbar__menu">
+                    <a href="{% url 'schedule' %}" class="navbar__link">Расписание семинаров</a>
+                    <a href="{% url 'gallery' %}" class="navbar__link">Фотогалерея</a>
+                    <p class="navbar__link navbar__tel">Заказать звонок</p>
+                    <div class="navbar__info">
+                        <a href="tel:+77758685628" class="navbar__link">+7 775 868-56-28</a>
+                        <a href="mailto:info@pcgroup.kz" class="navbar__link">info@pcgroup.kz</a>
+                    </div>
+                </div>
+                <div class="navbar__burger">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="call__body">
+        <h3>Оставьте свой номер и мы с Вами свяжемся!</h3>
+        <form action="{% url 'callme' %}">
+            <input type="tel" placeholder="+7 (700) 000 0000" required name="call">
+            <input type="submit" class="callMeBtn" value="ПОЗВОНИТЕ МНЕ!">
+            <a href="#!" class="closeBtn">Закрыть</a>
+        </form>
+        <p>Пример:</p>
+        <p>+7 (000) 123 4567</p>
+    </div>
+    <header class="header">
+        <div class="header__blur">
+            <div class="container">
+                <div class="header__body">
+                    <h1>Premier Consulting Group</h1>
+                    <p> Образовательные и консультационные <br> услуги в Казахстане</p>
+                    <a href="#services" class="header_slide-down"><i class="fas fa-chevron-down"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="service" id="services">
+        <div class="container">
+            <div class="service__title title">
+                <h2>Наши услуги</h2>
+                <hr>
+            </div>
+            <div class="service__body">
+                <div class="service__item">
+                    <img src="{% static 'img/item1.webp' %}" alt="">
+                    <p>Бизнес-тренинги и семинары.</p>
+                </div>
+                <div class="service__item">
+                    <img src="{% static 'img/item2.webp' %}" alt="">
+                    <p>Корпоративное обучение.</p>
+                </div>
+                <div class="service__item">
+                    <img src="{% static 'img/item3.webp' %}" alt="">
+                    <p>Зарубежное обучение и бизнес-туры.</p>
+                </div>
+                <div class="service__item">
+                    <img src="{% static 'img/item4.webp' %}" alt="">
+                    <p>Дистанционное обучение.</p>
+                </div>
+                <div class="service__item">
+                    <img src="{% static 'img/item5.webp' %}" alt="">
+                    <p>Организация деловых мероприятий.</p>
+                </div>
+                <div class="service__item">
+                    <img src="{% static 'img/item6.webp' %}" alt="">
+                    <p>Проведение тимбилдингов.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about">
+        <div class="container">
+            <div class="about__title title">
+                <h2>Наша миссия</h2>
+                <hr>
+            </div>
+            <div class="about__body">
+                <p>Наши слушатели получают не только хорошую теоретическую базу, но и ценные рекомендации, основанные на практическом опыте экспертов – преподавателей вузов, представителей государственных органов, известных бизнес-консультантов, руководителей и ведущих специалистов успешных компаний.</p>
+                <p>Программы повышения квалификации позволят в сжатые сроки и с минимальными затратами получить новые знания и навыки, необходимые для Вашего карьерного развития.
+                    Мы предлагаем широкий спектр программ повышения квалификации для сотрудников и руководителей.</p>
+                <p>Кроме этого, в рамках корпоративного заказа мы можем реализовать любой индивидуальный образовательный проект.</p>
+                <p>Все программы специально адаптируются с учетом требований заказчика.</p>
+            </div>
+        </div>
+    </section>
+    <!-- <section class="direction">
+        <div class="container">
+            <div class="direction__title title">
+                <h2>Наши направления</h2>
+                <hr>
+            </div>
+            <div class="service__body">
+                <div class="service__item">
+                    <img src="img/недропользование.webp" alt="">
+                    <p>Недропользование</p>
+                </div>
+                <div class="service__item">
+                    <img src="img/закупки.jpeg" alt="">
+                    <p>Закупки</p>
+                </div>
+                <div class="service__item">
+                    <img src="img/управление персоналом.webp" alt="">
+                    <p>Управление персоналом</p>
+                </div>
+                <div class="service__item">
+                    <img src="img/финансы.webp" alt="">
+                    <p>Финансы</p>
+                </div>
+                <div class="service__item">
+                    <img src="img/право.webp" alt="">
+                    <p>Право</p>
+                </div>
+                <div class="service__item">
+                    <img src="img/маркетинг.webp" alt="">
+                    <p> Маркетинг</p>
+                </div>
+                <div class="service__item">
+                    <img src="img/логистика.webp" alt="">
+                    <p>Логистика</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <div class="topBtn">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    <footer class="footer">
+        <div class="footer__blur">
+            <div class="container">
+                <div class="footer__body">
+                    <h3>МЫ ВСЕГДА ГОТОВЫ <br>ОТВЕТИТЬ НА ВСЕ ВАШИ <br>ВОПРОСЫ!</h3>
+                    <h4>Email: <br>info@pcgroup.kz</h4>
+                    <h4>Tel: <br>+7 (727) 346-65-32 <br>+7 775 868-56-28</h4>
+                    <h4>WhatsApp: <br> +7 747 288 89 50</h4>
+                    <h5>г.Алматы, ул. Биокомбинат 7 (Сатпаева-Байзакова)</h5>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+</body>
+</html>
